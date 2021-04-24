@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 /*
  Closures are mainly used for two reasons:
  1- Completion blocks
@@ -107,4 +108,13 @@ class MyClass {
         }
         closure()
     }
+    /*
+     Since we are using a static UIView method and self doesn’t keep any strong reference of UIView.
+     */
+    func notNeedRemoveStrongReference() {
+        UIView.animate(withDuration: 5, animations: {
+            self.method()
+        })
+    }
 }
+

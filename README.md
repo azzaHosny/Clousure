@@ -1,2 +1,0 @@
-# Clousure
-closure types
